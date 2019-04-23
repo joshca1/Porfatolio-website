@@ -1,0 +1,125 @@
+$menu-color: rgba(0, 0, 0, 1);
+.header {
+  position: fixed;
+  width: 100vw;
+  height: 7%;
+  background-color: $menu-color;
+  overflow: hidden;
+}
+.contenido {
+  padding-top: 70px;
+}
+.nav-links {
+  overflow: hidden;
+  display: flex;
+  width: inherit;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  ul {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    list-style-type: none;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+    &:hover {
+      color: rgba(110, 243, 175, 1);
+    }
+  }
+}
+.burger-menu {
+  width: 100vw;
+  height: 100vh;
+}
+.burger-icon {
+  cursor: pointer;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 50px;
+  padding: 10px;
+  height: 45px;
+}
+.burger-icon > div {
+  transition: transform 1s;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+  background-color: white;
+  height: 3px;
+  &:before {
+    content: '';
+    transform-origin: bottom right;
+    background-color: red;
+    transition: transform 1s;
+    transform: rotate(45deg);
+    position: absolute;
+    width: 100%;
+    top: 10px;
+    // background-color: inherit;
+    height: 3px;
+  }
+  // &:after {
+  //   content: '';
+  //   transform-origin: 50% 50%;
+  //   background-color: red;
+  //   position: absolute;
+  //   transition: transform 1s;
+  //   width: 100%;
+  //   top: -10px;
+  //   // background-color: inherit;
+  //   height: 3px;
+  // }
+}
+.burger-active {
+  height: 50vh;
+  transition: height 1s;
+  .nav-links {
+    display: flex;
+  }
+  ul {
+    display: inline-block;
+  }
+}
+.burger-icon:hover {
+  div {
+    transform: rotate(140deg);
+    &:before {
+    }
+    &:after {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.burger-inactive {
+  transition: height 1s;
+}
+@media (max-width: 600px) {
+  .nav-links {
+    display: none;
+  }
+
+  .burger-icon {
+    display: flex;
+  }
+}
+@media (min-width: 600px) {
+  .header {
+    height: 7%;
+    ul {
+      display: flex;
+    }
+  }
+}
