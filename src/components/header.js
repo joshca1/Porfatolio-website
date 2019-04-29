@@ -1,6 +1,6 @@
 import React from 'react'
 import './header.scss'
-import { ActiveBurger } from '../context.js'
+import ActiveBurger from '../burger-context.js'
 
 const Header = props => {
   return (
@@ -25,13 +25,16 @@ const Header = props => {
                 <a href="#1"> Home </a>
               </li>
               <li>
-                <a href="#1"> Porfafolio </a>
+                <link to="Porfafolio"> Porfafolio </link>
+                <span />
               </li>
               <li>
                 <a href="#1"> About </a>
+                <span />
               </li>
               <li>
                 <a href="#1"> Contact </a>
+                <span />
               </li>
             </ul>
           </div>
