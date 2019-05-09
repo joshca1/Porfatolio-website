@@ -1,27 +1,30 @@
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-body {
-  width: 100vw;
-  height: 100vh;
-}
-.contenido {
-  width: 100%;
-}
-.App {
   text-align: center;
   font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
 }
-.App-link {
-  color: #61dafb;
+/* html {
+  overflow-y: scroll;
+} */
+body {
+  /* background-color: #4d4d4d; */
+  min-height: 110vh;
 }
-.testeo:nth-child(odd) {
-  background-color: black;
-  height: 20vh;
+.content {
+  padding: 100px 0;
+  display: flex;
+  justify-content: center;
 }
-.testeo:nth-child(even) {
-  background-color: red;
-  height: 20vh;
+
+.test-div {
+  align-content: center;
+  justify-content: center;
+  padding-top: 100px;
+  background: blue;
+}
+.test-div a {
+  color: black;
 }
