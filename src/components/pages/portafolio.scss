@@ -1,9 +1,102 @@
+@import './src/scss/variables.scss';
+$min-break-point: 250px;
 .portafolio {
-  height: 30vh;
-  width: 100vw;
-  display: flex;
+  overflow-y: hidden;
+  overflow: hidden;
+  padding: 10px;
+  min-width: 205px;
+  grid-template-columns: repeat(auto-fill, minmax($min-break-point, 90%));
+  display: grid;
+  width: 90%;
+  height: auto;
+  color: rgba(0, 0, 0, 0.678);
+  grid-gap: 20px;
   justify-content: center;
   align-items: center;
-  background: url('https://previews.123rf.com/images/_ig0rzh_/_ig0rzh_1210/_ig0rzh_121000019/15829874-abstract-background-tecnol%C3%B3gico-brillantes-cuadrados-azules.jpg')
-    no-repeat fixed center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.project-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: opacity 0.5s;
+  a {
+    display: inline-block;
+    min-width: 4rem;
+    font-size: 1.2rem;
+    width: auto;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    color: $black;
+    border: 2px solid $black;
+    border-radius: 5px;
+    text-align: center;
+    outline-width: 10px;
+    text-decoration: none;
+    transition: background-color 0.2s ease-out, color 0.2s ease-out;
+    & > span {
+      padding: 0.5rem;
+    }
+    &:hover {
+      color: rgb(238, 27, 27);
+      transition: color 0.1s ease-in;
+    }
+    &:active {
+      transform: scale(0.94);
+    }
+  }
+}
+.project-card {
+  display: grid;
+  grid-template-columns: minmax($min-break-point, 60%) minmax(
+      $min-break-point,
+      40%
+    );
+  grid-gap: 1px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  .project-photo {
+    width: 100%;
+    height: 100%;
+    background: $black;
+    figure {
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .project-info {
+    background-color: #1fc8db;
+    background-image: linear-gradient(
+      140deg,
+      #0aaec4 10%,
+      #36caf78f 51%,
+      #afc6f8c4 75%
+    );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    & > h1 {
+      font-size: 2rem;
+    }
+    & > p {
+      padding: 1rem;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .project-card {
+    grid-template: repeat(2, minmax($min-break-point, 500px)) / 1fr;
+  }
 }
