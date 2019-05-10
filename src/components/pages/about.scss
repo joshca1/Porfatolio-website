@@ -1,0 +1,11 @@
+@import './src/scss/variables.scss';
+.about {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  background: url('https://s3.envato.com/files/a4c2e1aa-9c57-4516-8d8b-9ae80aae23a5/inline_image_preview.jpg');
+}
