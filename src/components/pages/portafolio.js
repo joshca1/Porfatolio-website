@@ -25,7 +25,7 @@ const Portafolio = props => {
             </a>
 
             <a href="#4">
-              <span className="icon is-small">
+              <span className="icon">
                 <i className="fas fa-play" />
               </span>
               <span>Live</span>
@@ -54,7 +54,7 @@ const Portafolio = props => {
             </a>
 
             <a href="#4">
-              <span className="icon is-small">
+              <span className="icon">
                 <i className="fas fa-play" />
               </span>
               <span>Live</span>

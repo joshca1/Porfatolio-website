@@ -11,20 +11,12 @@
 } */
 body {
   /* background-color: #4d4d4d; */
-  min-height: 110vh;
 }
 .content {
-  padding: 100px 0;
+  overflow-y: hidden;
+  overflow-x: hidden;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-}
-
-.test-div {
-  align-content: center;
-  justify-content: center;
-  padding-top: 100px;
-  background: blue;
-}
-.test-div a {
-  color: black;
+  align-items: center;
 }

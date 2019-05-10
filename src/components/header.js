@@ -54,7 +54,7 @@ const Header = props => {
               </li>
               <li>
                 <a
-                  href="#contact"
+                  href="https://www.linkedin.com/in/jose-ca%C3%B1izales-461413151/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="linked-icon"

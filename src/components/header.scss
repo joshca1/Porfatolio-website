@@ -9,15 +9,28 @@
   padding-top: 70px;
 }
 .linked-icon {
-  min-width: 50px !important;
+  min-width: auto !important;
   margin-left: 10px;
 
   & > i {
     font-size: 1.7rem;
+    position: relative;
     color: white;
     &:hover {
-      color: $green;
+      color: $link-blue;
       transition: color 0.1s ease-in;
+      background-size: cover;
+      &:after {
+        position: absolute;
+        content: '';
+        background: #fff;
+        z-index: -1;
+        border-radius: 50%;
+        top: 4px;
+        left: 0px;
+        width: 100%;
+        height: 80%;
+      }
     }
   }
 }
@@ -97,7 +110,7 @@
 }
 .active-link {
   position: relative;
-  color: #10a5e8 !important;
+  color: rgb(65, 123, 230) !important;
   &:after {
     content: '';
     position: absolute;
@@ -105,7 +118,7 @@
     top: 0.5rem;
     width: 100%;
     height: 20px;
-    border-bottom: 2px solid #10a5e8;
+    border-bottom: 2px solid $link-blue;
   }
 }
 .burger-active {
