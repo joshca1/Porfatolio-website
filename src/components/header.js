@@ -1,9 +1,12 @@
 import React from 'react'
 import './header.scss'
 import ActiveBurger from '../burger-context.js'
-import { NavLink } from 'react-router-dom'
-import { withRouter } from 'react-router'
 const Header = props => {
+  const closeBurger = (burger, set) => {
+    if (burger.isActive) {
+      set({ isActive: false })
+    }
+  }
   return (
     <ActiveBurger.Consumer>
       {({ burger, setBurger }) => (
@@ -23,24 +26,34 @@ const Header = props => {
           <div className="nav-links">
             <ul>
               <li>
-                <NavLink exact to="/" activeClassName="active-link">
-                  Home
-                </NavLink>
-              </li>
-              <li>
-                <NavLink exact to="/portafolio" activeClassName="active-link">
-                  Porfafolio
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/about" activeClassName="active-link">
+                <a
+                  onClick={() => {
+                    closeBurger(burger, setBurger)
+                  }}
+                  href="#about"
+                >
                   About
-                </NavLink>
+                </a>
               </li>
               <li>
-                <NavLink to="/contact" activeClassName="active-link">
+                <a
+                  onClick={() => {
+                    closeBurger(burger, setBurger)
+                  }}
+                  href="#portafolio"
+                >
+                  Porfafolio
+                </a>
+              </li>
+              <li>
+                <a
+                  onClick={() => {
+                    closeBurger(burger, setBurger)
+                  }}
+                  href="#contact"
+                >
                   Contact
-                </NavLink>
+                </a>
               </li>
               <li>
                 <a
@@ -69,4 +82,4 @@ const Header = props => {
     </ActiveBurger.Consumer>
   )
 }
-export default withRouter(Header)
+export default Header
