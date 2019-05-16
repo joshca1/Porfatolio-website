@@ -7,11 +7,14 @@
   width: 100vw;
   height: 100vh;
   color: white;
-  background: url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/cW5lDBG/videoblocks-abstract-programming-code-background-software-development-concept_bdh5fisnx_thumbnail-full01.png')
-    no-repeat center fixed;
+  background: url('../../images/background-image.jpg') no-repeat center fixed;
   background-size: cover;
   position: relative;
-  & > p {
+  h1 {
+    margin-bottom: 60px;
+  }
+  p {
+    margin: 0 20px 0 20px;
     font-style: oblique;
   }
 }
