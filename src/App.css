@@ -21,3 +21,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+.fa-github:hover {
+  color: #7dbbe6 !important;
+}

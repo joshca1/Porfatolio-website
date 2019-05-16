@@ -1,0 +1,51 @@
+@import './src/scss/variables.scss';
+.contact {
+  color: white;
+  display: grid;
+  grid-template: 1fr/ 1fr 1fr;
+  min-height: 15vh;
+  width: 100%;
+  position: relative;
+  background-color: $black;
+
+  i {
+    font-size: 2rem;
+  }
+  .links {
+    display: flex;
+    align-items: center;
+    justify-self: end;
+    margin: 10px 20% 0 0;
+  }
+  .contact-header {
+    display: flex;
+    margin: 10px 0 0 20%;
+    align-items: center;
+    button {
+      cursor: pointer;
+    }
+    img {
+      background-size: cover;
+      width: 50px;
+      height: 36px;
+    }
+    .mail {
+      color: inherit;
+      margin: 5px 0;
+    }
+    button {
+      background: transparent;
+      color: white;
+      border: 1px solid white;
+      height: 29px;
+      width: 80px;
+      border-radius: 10px;
+    }
+  }
+  &:after {
+    content: '© 2019 Jose Cañizales';
+    grid-column: 1 / span 2;
+    font-size: 0.8rem;
+    font-style: oblique;
+  }
+}

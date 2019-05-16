@@ -3,10 +3,16 @@ import './portafolio.scss'
 import project1Preview from '../../images/carro.gif'
 import project2Preview from '../../images/second.gif'
 const Portafolio = props => {
-  // const projectStaticImages = ['imag1', 'image2']
+  const projectStaticImages = [
+    'https://websitesetup.org/wp-content/uploads/2018/04/bluehost-landing-page.jpg',
+    'https://99designs-start-attachments.imgix.net/alchemy-pictures/2016%2F01%2F29%2F06%2F52%2F16%2F2574220d-7737-4c39-a562-8e153a5d1497%2Fwebsite-hero3.png?auto=format&ch=Width%2CDPR&fm=png&w=824&h=457'
+  ]
   const projectGif = [project1Preview, project2Preview]
   const prewviewProjectImages = (event, number) => {
     event.target.src = projectGif[number - 1]
+  }
+  const restorePortraitImage = (event, number) => {
+    event.target.src = projectStaticImages[number - 1]
   }
   return (
     <div className="portafolio" id="portafolio">
@@ -18,6 +24,9 @@ const Portafolio = props => {
             onMouseEnter={event => {
               prewviewProjectImages(event, 1)
             }}
+            onMouseOut={event => {
+              restorePortraitImage(event, 1)
+            }}
           />
         </div>
         <div className="project-info">
@@ -25,12 +34,13 @@ const Portafolio = props => {
             <h1>Ecommerce site</h1>
             <h5>Tecnologies Used:</h5>
             <p>Nuxt | Vue | Vuex | Firebase | Bulma</p>
-            <h5>Gained Skills:</h5>
-            <p>Form Validations | Promises | async await | Es6</p>
+            <h5>Skills Develop:</h5>
+            <p>Promises | async await | Es6 | Form Validations</p>
+            <h5>Project Description:</h5>
             <p>
               Implementing Login, register user, recovery password, wizard to
-              make a publication, uploading images, set a location, chat, liked
-              publications
+              make a publication, uploading images, set a location, contact
+              chat, user favorites publications.
             </p>
           </div>
           <div className="project-links">
@@ -56,6 +66,9 @@ const Portafolio = props => {
             alt="Project 2"
             onMouseEnter={event => {
               prewviewProjectImages(event, 2)
+            }}
+            onMouseOut={event => {
+              restorePortraitImage(event, 2)
             }}
           />
         </div>
