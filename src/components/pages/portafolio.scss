@@ -1,6 +1,6 @@
 @import './src/scss/variables.scss';
-$min-break-point: 250px;
-$project-card-height: 600px;
+$min-break-point: 317px;
+$project-card-height: 700px;
 .portafolio {
   overflow-y: hidden;
   overflow: hidden;
@@ -63,7 +63,7 @@ $project-card-height: 600px;
   justify-content: center;
   align-items: center;
   height: $project-card-height;
-  max-height: $project-card-height;
+  max-height: 400px;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -72,7 +72,7 @@ $project-card-height: 600px;
     width: 100%;
     transition: background-image 2s ease-out;
     img {
-      max-height: $project-card-height;
+      max-height: 400px;
       height: 100%;
       width: 100%;
     }
@@ -123,6 +123,6 @@ $project-card-height: 600px;
 @media (max-width: 600px) {
   .project-card {
     max-height: $project-card-height;
-    grid-template: repeat(2, minmax($min-break-point, 50%)) / 1fr;
+    grid-template: minmax($min-break-point, 20%) minmax($min-break-point, 80%) / 1fr;
   }
 }

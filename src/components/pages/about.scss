@@ -10,4 +10,35 @@
   background: url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/cW5lDBG/videoblocks-abstract-programming-code-background-software-development-concept_bdh5fisnx_thumbnail-full01.png')
     no-repeat center fixed;
   background-size: cover;
+  position: relative;
+  & > p {
+    font-style: oblique;
+  }
+}
+.link-portafolio {
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  left: 0px;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  animation: floating-button 1s infinite;
+  animation-direction: alternate;
+  user-select: none;
+  font-size: 2rem;
+  background: url('../../images/down-arrow.png') no-repeat;
+  background-size: cover;
+  filter: invert(100%);
+  text-decoration: none;
+}
+
+@keyframes floating-button {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(5px);
+  }
 }
