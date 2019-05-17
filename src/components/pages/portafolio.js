@@ -1,13 +1,17 @@
 import React from 'react'
 import './portafolio.scss'
-import project1Preview from '../../images/carro.gif'
-import project2Preview from '../../images/second.gif'
+import project1Photo from '../../images/project1/photo1.jpg'
+import project1Preview from '../../images/project1/project1preview.gif'
+
+import project2Photo from '../../images/project2/photo1.jpg'
+import project2Preview from '../../images/project2/preview.jpg'
+
+import project3Photo from '../../images/project3/photo1.jpg'
+import project3Preview from '../../images/project3/preview.jpg'
+
 const Portafolio = props => {
-  const projectStaticImages = [
-    'https://websitesetup.org/wp-content/uploads/2018/04/bluehost-landing-page.jpg',
-    'https://99designs-start-attachments.imgix.net/alchemy-pictures/2016%2F01%2F29%2F06%2F52%2F16%2F2574220d-7737-4c39-a562-8e153a5d1497%2Fwebsite-hero3.png?auto=format&ch=Width%2CDPR&fm=png&w=824&h=457'
-  ]
-  const projectGif = [project1Preview, project2Preview]
+  const projectStaticImages = [project1Photo, project2Photo, project3Photo]
+  const projectGif = [project1Preview, project2Preview, project3Preview]
   const prewviewProjectImages = (event, number) => {
     event.target.src = projectGif[number - 1]
   }
@@ -19,7 +23,7 @@ const Portafolio = props => {
       <div className="project-card">
         <div className="project-photo">
           <img
-            src="https://websitesetup.org/wp-content/uploads/2018/04/bluehost-landing-page.jpg"
+            src={project1Photo}
             alt="Project 1"
             onMouseEnter={event => {
               prewviewProjectImages(event, 1)
@@ -35,7 +39,7 @@ const Portafolio = props => {
             <h5>Tecnologies Used:</h5>
             <p>Nuxt | Vue | Vuex | Firebase | Bulma</p>
             <h5>Skills Develop:</h5>
-            <p>Handle Async Code (promises, async await) Advanced Js </p>
+            <p>Async Code | Workflow | Advanced Js | backend node </p>
             <h5>Project Description:</h5>
             <p>
               Implementing Login, register user, recovery password, wizard to
@@ -62,7 +66,7 @@ const Portafolio = props => {
       <div className="project-card">
         <div className="project-photo">
           <img
-            src="https://websitesetup.org/wp-content/uploads/2018/04/bluehost-landing-page.jpg"
+            src={project2Photo}
             alt="Project 2"
             onMouseEnter={event => {
               prewviewProjectImages(event, 2)
@@ -104,7 +108,7 @@ const Portafolio = props => {
       <div className="project-card">
         <div className="project-photo">
           <img
-            src="https://websitesetup.org/wp-content/uploads/2018/04/bluehost-landing-page.jpg"
+            src={project3Photo}
             alt="Project 3"
             onMouseEnter={event => {
               prewviewProjectImages(event, 3)
@@ -134,7 +138,7 @@ const Portafolio = props => {
               </span>
               <span>Code</span>
             </a>
-            <a href="#4">
+            <a href="#about">
               <span className="icon">
                 <i className="fas fa-play" />
               </span>
