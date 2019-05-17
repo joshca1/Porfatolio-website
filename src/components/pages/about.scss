@@ -6,6 +6,7 @@
   flex-direction: column;
   width: 100vw;
   height: 100vh;
+  line-height: 1.5;
   color: white;
   background: url('../../images/background-image.jpg') no-repeat center fixed;
   background-size: cover;
@@ -27,7 +28,7 @@
   width: 50px;
   height: 50px;
   background-color: transparent;
-  animation: floating-button 1s infinite;
+  animation: floating-button 1s infinite linear;
   animation-direction: alternate;
   user-select: none;
   font-size: 2rem;
@@ -42,6 +43,6 @@
     transform: translateY(0px);
   }
   to {
-    transform: translateY(5px);
+    transform: translateY(10px);
   }
 }
