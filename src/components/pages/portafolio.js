@@ -20,6 +20,8 @@ const Portafolio = props => {
   }
   return (
     <div className="portafolio" id="portafolio">
+      <em>Projects</em>
+      <hr />
       <div className="project-card">
         <div className="project-photo">
           <img
@@ -41,10 +43,12 @@ const Portafolio = props => {
             <h5>Skills Develop:</h5>
             <p>Async Code | Workflow | Advanced Js | backend node </p>
             <h5>Project Description:</h5>
-            <p>
-              Implementing Login, register user, recovery password, wizard to
-              make a publication, uploading images, set a location, contact
-              chat, user favorites publications.
+            <p className="project-description">
+              Website that allows to make publications (products, or services)
+              Implementing Login, register user,user profile, recovery password,
+              wizard to make a publication, uploading images, set a location for
+              the publication (google maps api), contact chat for a specific
+              product, user favorites publications, security privileges.
             </p>
           </div>
           <div className="project-links">

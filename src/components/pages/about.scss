@@ -12,10 +12,13 @@
   background-size: cover;
   position: relative;
   h1 {
-    margin-bottom: 60px;
+    margin-bottom: 30px;
   }
   p {
+    align-self: center;
+    text-align: center;
     margin: 0 20px 0 20px;
+    width: 50%;
     font-style: oblique;
   }
 }

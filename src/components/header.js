@@ -57,6 +57,16 @@ const Header = props => {
               </li>
               <li>
                 <a
+                  href="#curri"
+                  className="cv"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  CV
+                </a>
+              </li>
+              <li>
+                <a
                   href="https://github.com/joshca1"
                   target="_blank"
                   rel="noopener noreferrer"

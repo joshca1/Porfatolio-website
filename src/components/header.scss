@@ -41,6 +41,14 @@
   height: 100%;
   align-items: center;
   justify-content: center;
+  .cv {
+    font-size: 1.5rem;
+    font-weight: bold;
+    min-width: 40px;
+    &:hover {
+      color: rgb(248, 64, 64);
+    }
+  }
   ul {
     display: flex;
     align-items: center;
@@ -51,6 +59,7 @@
   }
 
   a {
+    cursor: pointer;
     color: white;
     font-size: inherit;
     font-weight: 700;
@@ -154,7 +163,6 @@
     }
   }
 }
-
 .burger-inactive {
   opacity: 1;
   transition: height 0.5s;
