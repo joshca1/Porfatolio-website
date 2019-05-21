@@ -1,10 +1,11 @@
 @import './src/scss/variables.scss';
+@import url(https://fonts.googleapis.com/css?family=EB+Garamond|Cardo:400italic);
 $min-break-point: 317px;
-$project-card-height: 700px;
+$project-card-height: 800px;
 .portafolio {
   overflow-y: hidden;
   overflow: hidden;
-  padding: 100px 0;
+  padding: 50px 0;
   min-width: 205px;
   grid-template-columns: repeat(auto-fill, minmax($min-break-point, 90%));
   display: grid;
@@ -14,7 +15,6 @@ $project-card-height: 700px;
   grid-gap: 20px;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 .project-links {
   display: flex;
@@ -62,8 +62,8 @@ $project-card-height: 700px;
   width: 100%;
   justify-content: center;
   align-items: center;
-  height: $project-card-height;
-  max-height: 400px;
+  height: 100%;
+  max-height: $project-card-height;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -72,7 +72,7 @@ $project-card-height: 700px;
     width: 100%;
     transition: background-image 2s ease-out;
     img {
-      max-height: 400px;
+      max-height: $project-card-height;
       height: 100%;
       width: 100%;
     }
@@ -113,13 +113,40 @@ $project-card-height: 700px;
       h5 {
         padding: 0.5rem;
       }
+      .project-description {
+        text-align: justify;
+      }
       p {
-        text-align: jstify;
         font-family: Arial, Helvetica, sans-serif;
       }
     }
   }
 }
+em {
+  font-family: 'EB Garamond', serif;
+  font-size: 3.5em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  display: block;
+  font-style: normal;
+  padding-top: 0.1em;
+  text-shadow: 0.07em 0.07em 0 rgba(0, 0, 0, 0.1);
+
+  &::before,
+  &::after {
+    content: '';
+    display: inline-block;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    opacity: 0.2;
+    margin: 0 0.6em;
+    font-size: 0.5em;
+  }
+}
+
 @media (max-width: 600px) {
   .project-card {
     max-height: $project-card-height;
