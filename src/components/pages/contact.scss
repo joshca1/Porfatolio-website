@@ -3,7 +3,7 @@
   color: white;
   display: grid;
   grid-template: 1fr/ 1fr 1fr;
-  min-height: 15vh;
+  min-height: 5vh;
   width: 100%;
   position: relative;
   background-color: $black;
@@ -46,6 +46,7 @@
     content: '© 2019 Jose Cañizales';
     grid-column: 1 / span 2;
     font-size: 0.8rem;
+    padding-bottom: 5px;
     font-style: oblique;
   }
 }
