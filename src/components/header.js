@@ -55,7 +55,7 @@ const Header = props => {
                   Contact
                 </a>
               </li>
-              <li>
+              <li className="curriculum">
                 <a
                   href="#curri"
                   className="cv"
@@ -63,6 +63,14 @@ const Header = props => {
                   rel="noopener noreferrer"
                 >
                   CV
+                </a>
+                <a
+                  href="https://firebasestorage.googleapis.com/v0/b/nuxt-app-firebase.appspot.com/o/FRONT-END's%20Resume%20(1).pdf?alt=media&token=50352594-9e49-4f70-9701-af37d4c85deb"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="linked-icon cv-icon"
+                >
+                  <i className="fas fa-download" />
                 </a>
               </li>
               <li>

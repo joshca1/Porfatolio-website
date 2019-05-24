@@ -41,12 +41,30 @@
   height: 100%;
   align-items: center;
   justify-content: center;
-  .cv {
-    font-size: 1.5rem;
-    font-weight: bold;
-    min-width: 40px;
+  .curriculum {
+    .cv {
+      font-size: 1.5rem;
+      font-weight: bold;
+      min-width: 40px;
+    }
+    .cv-icon {
+      display: none;
+    }
     &:hover {
-      color: rgb(248, 64, 64);
+      .cv-icon {
+        display: flex;
+        width: 30px;
+        align-items: center;
+        justify-content: center;
+        & > i {
+          color: rgb(102, 223, 162);
+          border-radius: 0 !important;
+          background-color: $black;
+        }
+      }
+      .cv {
+        display: none;
+      }
     }
   }
   ul {
